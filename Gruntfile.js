@@ -12,6 +12,13 @@ module.exports = function(grunt) {
         }
       }
     },
+    uglify: {
+      my_target: {
+        files: {
+          'public/javascripts/application.js': 'public/javascripts/application.js'
+        }
+      }
+    },
     stylus: {
       compile: {
         options: {
@@ -26,4 +33,5 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-stylus');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 };
