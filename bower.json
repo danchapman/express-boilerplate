@@ -1,0 +1,14 @@
+{
+  "name": "dan-chapman-consulting",
+  "version": "0.0.0",
+  "authors": [
+    "Daniel Chapman <dan@theclymb.com>"
+  ],
+  "description": "Website for Dan Chapman Consulting",
+  "main": "/bower_components",
+  "license": "MIT",
+  "homepage": "danchapman.consulting",
+  "dependencies": {
+    "angular": "~1.4.1"
+  }
+}
