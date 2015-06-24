@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var stylus = require('stylus')
+var nib = require('nib')
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -17,6 +19,21 @@ app.set('view engine', 'jade');
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
+
+
+// stylus and nib setup
+function compile(str, path) {
+  return stylus(str)
+    .set('filename', path)
+    .use(nib())
+}
+
+app.use(stylus.middleware(
+  { src: __dirname + '/public'
+  , compile: compile
+  }
+))
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
