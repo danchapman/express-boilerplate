@@ -18,6 +18,7 @@
     "stylus": "^0.51.1"
   },
   "devDependencies": {
-    "grunt-contrib-coffee": "^0.13.0"
+    "grunt-contrib-coffee": "^0.13.0",
+    "grunt-contrib-stylus": "^0.21.0"
   }
 }

@@ -8,11 +8,22 @@ module.exports = function(grunt) {
           join: true
         },
         files: {
-          'public/javascripts/main.js': 'assets/coffee/*.coffee' // compile and concat into single file
+          'public/javascripts/application.js': 'assets/coffee/*.coffee'
+        }
+      }
+    },
+    stylus: {
+      compile: {
+        options: {
+          compress: true,
+        },
+        files: {
+          'public/stylesheets/style.css': 'assets/stylus/*.styl'
         }
       }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-contrib-stylus');
 };
