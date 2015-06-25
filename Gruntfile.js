@@ -27,9 +27,20 @@ module.exports = function(grunt) {
         files: {
           'public/stylesheets/style.css': 'assets/stylus/*.styl'
         }
+      },
+      compileDev: {
+        options: {
+          compress: false,
+        },
+        files: {
+          'public/stylesheets/style.css': 'assets/stylus/*.styl'
+        }
       }
     }
   });
+
+  grunt.registerTask('devAssets', ['coffee', 'stylus:compileDev']);
+  grunt.registerTask('prodAssets', ['coffee', 'uglify', 'stylus:compile']);
 
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-stylus');

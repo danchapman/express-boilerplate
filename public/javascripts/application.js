@@ -1,1 +1,4 @@
-(function(){console.log("test")}).call(this);
+(function() {
+  console.log("test");
+
+}).call(this);
