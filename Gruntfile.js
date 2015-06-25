@@ -36,6 +36,22 @@ module.exports = function(grunt) {
           'public/stylesheets/style.css': 'assets/stylus/*.styl'
         }
       }
+    },
+    watch: {
+      options: {
+        livereload: true
+      },
+      coffee: {
+        files: ['assets/coffee/*.coffee'],
+        tasks: ['coffee']
+      },
+      stylus: {
+        files: ['assets/coffee/*.coffee'],
+        tasks: ['stylus:compileDev']
+      },
+      views: {
+        files: ['views/*.jade']
+      }
     }
   });
 
@@ -45,4 +61,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 };

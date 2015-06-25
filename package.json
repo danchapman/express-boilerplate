@@ -22,5 +22,7 @@
     "serve-favicon": "~2.2.1",
     "stylus": "^0.51.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "grunt-contrib-watch": "^0.6.1"
+  }
 }
