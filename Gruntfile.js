@@ -2,6 +2,22 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    bower_concat: {
+      dev: {
+        dest: 'build/_bower.js',
+        cssDest: 'build/_bower.css',
+        include: [
+          'angular'
+        ]
+      }
+      prod: {
+        dest: 'build/_bower.js',
+        cssDest: 'build/_bower.css',
+        include: [
+          'angular'
+        ]
+      }
+    },
     coffee: {
       compile: {
         options: {
@@ -62,4 +78,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-bower-concat');
 };
