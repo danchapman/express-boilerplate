@@ -57,5 +57,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
+// helpers
+app.locals.isProduction = process.env.NODE_ENV == 'production'
 
 module.exports = app;
