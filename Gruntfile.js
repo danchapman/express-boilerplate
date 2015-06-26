@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         include: [
           'angular'
         ]
-      }
+      },
       prod: {
         dest: 'build/_bower.js',
         cssDest: 'build/_bower.css',
@@ -26,6 +26,16 @@ module.exports = function(grunt) {
         files: {
           'public/javascripts/application.js': 'assets/coffee/*.coffee'
         }
+      }
+    },
+    concat: {
+      js: {
+        src: ['build/_bower.js', 'public/javascripts/application.js'],
+        dest: 'public/javascripts/application.js',
+      },
+      css: {
+        src: ['build/_bower.css', 'public/stylesheets/style.css'],
+        dest: 'public/stylesheets/style.css',
       }
     },
     uglify: {
@@ -71,12 +81,13 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('devAssets', ['coffee', 'stylus:compileDev']);
-  grunt.registerTask('prodAssets', ['coffee', 'uglify', 'stylus:compile']);
+  grunt.registerTask('devAssets', ['coffee', 'stylus:compileDev', 'bower_concat:dev', 'concat:js', 'concat:css']);
+  grunt.registerTask('prodAssets', ['coffee', 'stylus:compile', 'bower_concat:prod', 'concat:js', 'concat:css', 'uglify']);
 
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-bower-concat');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 };

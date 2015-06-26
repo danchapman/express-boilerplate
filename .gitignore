@@ -35,3 +35,6 @@ node_modules
 .*
 !/.gitignore
 
+# ignore public js and css
+public/javascripts/*
+public/css/*
