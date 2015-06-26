@@ -8,6 +8,6 @@ html
 
   script(type='text/javascript', src='/javascripts/application.js')
 
-  unless NODE_ENV == 'production'
+  unless process.env.NODE_ENV == 'production'
     script(type='text/javascript', src="//localhost:35729/livereload.js")
 
