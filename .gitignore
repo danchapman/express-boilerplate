@@ -37,4 +37,4 @@ node_modules
 
 # ignore public js and css
 public/javascripts/*
-public/css/*
+public/stylesheets/*
