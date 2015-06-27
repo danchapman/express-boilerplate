@@ -1,13 +1,12 @@
 {
-  "name": "dan-chapman-consulting",
+  "name": "express-boilerplate",
   "version": "0.0.0",
   "authors": [
-    "Daniel Chapman <dan@theclymb.com>"
+    "Daniel Chapman <chappyd23@gmail.com>"
   ],
-  "description": "Website for Dan Chapman Consulting",
+  "description": "An express.js boilerplate that uses bower, grunt, coffeescript, stylus, and jade.",
   "main": "/bower_components",
   "license": "MIT",
-  "homepage": "danchapman.consulting",
   "dependencies": {
     "angular": "~1.4.1"
   }
