@@ -9,16 +9,11 @@ module.exports = function(grunt) {
           './stylus'
         ],
         import: [
-          'nib/*',
-          'extensions/*'
+          'nib/*'
         ]
       },
       files: {
-        'public/stylesheets/style.css': [
-          'assets/stylus/base.styl',
-          'assets/stylus/type_rhythm.styl',
-          'assets/stylus/objects/*.styl'
-        ]
+        'public/stylesheets/style.css': ['assets/stylus/style.styl']
       }
     }
   }
