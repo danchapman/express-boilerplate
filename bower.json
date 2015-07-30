@@ -2,9 +2,9 @@
   "name": "express-boilerplate",
   "version": "0.0.0",
   "authors": [
-    "Daniel Chapman <chappyd23@gmail.com>"
+    "Daniel Chapman <dan@danchapman.consulting>"
   ],
-  "description": "An express.js boilerplate that uses bower, grunt, coffeescript, stylus, and jade.",
+  "description": "An Express Boilerplate with Angular, Bower, Karma, Mocha, and Jasmine",
   "main": "/bower_components",
   "license": "MIT",
   "dependencies": {
