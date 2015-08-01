@@ -4,7 +4,7 @@ module.exports = function(config) {
     basePath: 'test/client',
     browsers: ['Chrome'],
     preprocessors: {
-      'contact_app/*.coffee': ['coffee']
+      '[your_app_here]/*.coffee': ['coffee']
     },
     coffeePreprocessor: {
       options: {
@@ -18,7 +18,7 @@ module.exports = function(config) {
     files: [
       '../../public/javascripts/application.js',
       '../../bower_components/angular-mocks/angular-mocks.js',
-      'contact_app/*.coffee'
+      '[your_app_here]/*.coffee'
     ]
   });
 };
